@@ -53,7 +53,7 @@ GROUP BY location
 ORDER BY TotalDeathCount DESC
 
 
---BRESKING THINGS BASED ON CONTINENT
+--BREAKING THINGS BASED ON CONTINENT
 
 
 SELECT location,max(total_deaths) as TotalDeathCount
@@ -174,7 +174,7 @@ WHERE dea.continent IS NOT NULL
 SELECT *,(RollingPeopleVaccinated/population)*100 as RollingVaccinated_per_popln
 FROM #PERCENTPOPULATIONVACCINATED
 
--- CREATING VIEW TO STORE DAT FOR VISUALISATIONS
+-- CREATING VIEW TO STORE DATA FOR VISUALISATIONS
 
 CREATE VIEW PERCENTPOPULATIONVACCINATED AS
 SELECT dea.continent,dea.location,dea.date,dea.population,vac.new_vaccinations,
